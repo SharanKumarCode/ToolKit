@@ -1,0 +1,39 @@
+<div class="wrapper-bmi">
+  <div class="wrapper">
+      <div (click)="onKey()" class="closeCalc"></div>
+      <div class="buttons-group">
+          <div class="buttons" id="metric" data-value="metric" (click)="setUnit($event)">Metric</div>
+          <div class="buttons" id="imperial" data-value="imperial" (click)="setUnit($event)">Imperial</div>
+        </div>
+    <div class="age">
+      <span class="label">Age</span>
+      <input type="text" class="age-input input" #age placeholder="in years">
+    </div>
+    <div class="gender">
+        <span class="label">Gender</span>
+        <input type="radio" class="gender-input male" name="gender-select" value="male" (click)="setGender($event)">Male
+        <input type="radio" class="gender-input female-radio" name="gender-select" value="female" (click)="setGender($event)">Female
+      </div>
+      <div class="weight">
+          <span class="label">Weight</span>
+          <input type="text" class="weight-input input" #weight placeholder="{{weightText}}">
+        </div>
+      <div class="height">
+          <span class="label">Height</span>
+          <input type="text" class="height-input input" #height placeholder="{{heightText}}">
+        </div>
+      <div class="activity">
+          <span class="label">Activity Level</span>
+          <select name="activity" class="height-input input-list" #activity>
+              <option value="1.2">Sedentary</option>
+              <option value="1.375">Lightly active</option>
+              <option value="1.55">Moderately active</option>
+              <option value="1.725">Very active</option>
+              <option value="1.9">Extra active</option>
+            </select>
+        </div>
+      <div class="bmicalcButton" (click)="calc_bmiBmr(age,weight,height,activity)">
+          <span>Calculate BMI & BMR</span>
+        </div>
+  </div>
+</div>

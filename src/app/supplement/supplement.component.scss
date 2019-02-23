@@ -1,0 +1,38 @@
+.wrapper-suppl{
+    width: 100%;
+    height: 100%;
+    background: rgb(247, 247, 117);
+    border-radius: 2em;
+    // -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    // clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    position: relative;
+    top: -5%;
+
+    .output{
+        width: 90%;
+        height: 10%;
+        position: relative;
+        left: 10%;
+        top: 10%;
+        font-size: 2em;
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .output > .output2{
+        font-size: 0.7em;
+    }
+}
+
+.canvas{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+
+    canvas{
+        width: 100%;
+        height: 100%;
+    }
+}

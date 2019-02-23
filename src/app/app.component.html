@@ -1,0 +1,28 @@
+<div class="full-page">
+<div class="scene">
+<div [@rotateCalc]="visibComp.state" class="home-wrapper">
+  <div *ngIf="visibComp.compVisib.home" class="home components">
+    <app-home></app-home>
+  </div>
+  <div *ngIf="visibComp.compVisib.calc" class="calc components">
+    <app-calc></app-calc>
+  </div>
+  <div *ngIf="visibComp.compVisib.emi" class="emi-calc components">
+    <app-emi-calc></app-emi-calc>
+  </div>
+  <div *ngIf="visibComp.compVisib.bmi" class="bmi-calc components">
+    <app-bmi-calc></app-bmi-calc>
+  </div>
+  <div *ngIf="visibComp.compVisib.toDo" class="to-do-list components">
+    <app-to-do-list></app-to-do-list>
+  </div>
+  <div *ngIf="visibComp.compVisib.currency" class="currency-calc components">
+    <app-currency-calc></app-currency-calc>
+  </div>
+</div>
+</div>
+<div @fade *ngIf="dataSupp.isSupplVisible" class="supplement">
+  <app-supplement @fade></app-supplement>
+</div>
+</div>
+<router-outlet></router-outlet>

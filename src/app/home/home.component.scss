@@ -1,0 +1,57 @@
+$bg-color: rgb(62, 239, 252);
+
+@mixin grid-start-end($x,$y,$a,$b) {
+    grid-column-start: $x;
+    grid-column-end: $y;
+    grid-row-start: $a;
+    grid-row-end: $b;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+    .boxes{
+        background: $bg-color;
+        border-radius: 0.6em;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+        
+        span{
+            position: relative;
+            top: 45%;
+        }
+    }
+
+    .boxes:hover{
+        background: rgb(17, 33, 250);
+    }
+}
+
+.bmi-calc-box{
+    @include grid-start-end(1, 2, 1, 3);
+}
+
+.emi-calc-box{
+    @include grid-start-end(2, 4, 1, 2);
+}
+
+.calc-box{
+    @include grid-start-end(2, 3, 2, 3);
+}
+
+.to-do-list-box{
+    background: lightgrey;
+    @include grid-start-end(3, 4, 2, 4);
+}
+
+.currency-calc-box{
+    @include grid-start-end(1, 3, 3, 4);
+}

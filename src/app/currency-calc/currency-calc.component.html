@@ -1,0 +1,29 @@
+<div class="wrapper">
+<div (click)="onKey()" class="closeCalc"></div>
+<div class="wrapper-currency">
+  <div class="target-curr">
+      <select #currencySelect name="currency-list" class="options-currency" size="1">
+          <option value="inr">INR</option>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="gbp">GBP</option>
+          <option value="cad">CAD</option>
+          <option value="mxn">MXN</option>
+          <option value="aud">AUD</option>
+          <option value="cny">CNY</option>
+          <option value="php">PHP</option>
+        </select>
+        <input #amount type="text" class="amount" placeholder="enter amount">
+        <div (click)="currencyCalc(currencySelect,amount)" class="button">Convert</div>
+      </div>
+  <div class="exchange-rates">
+    <ul>
+      <li @fade *ngFor="let item of curren.currencyLists" class="lists">
+        <div class={{item.countryFlag}}></div>
+        <span class="currency-name">{{item.countryName}}</span>
+        <input disabled type="text" class="amount" value={{item.amount}}>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

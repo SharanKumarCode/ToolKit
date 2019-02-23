@@ -1,0 +1,131 @@
+@mixin grid-start-end($x,$y,$a,$b) {
+    grid-column-start: $x;
+    grid-column-end: $y;
+    grid-row-start: $a;
+    grid-row-end: $b;
+}
+
+.wrapper-emi{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    .closeCalc{
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../calc/close.png');
+        position: absolute;
+        left:100%;
+        top:0%;
+        width: 10%;
+        height: 10%;
+        cursor: pointer;
+    }
+
+    .closeCalc:hover{
+        background-color: grey;
+    }
+
+    .input-emi{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background: whitesmoke;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .box,.sliders{
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .sliders{
+        padding: 0%;
+
+        .slider-bar{
+        outline: none;
+        appearance: none;
+        height: 5px;
+        width: 80%;
+        background: rgb(33, 173, 253);
+        opacity: 0.5;
+        position: relative;
+        top: -30%;
+        }
+
+        .slider-bar:hover{
+            opacity: 1;
+        }
+
+        .slider-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: rgb(245, 146, 53);
+            border-radius: 50%; 
+            cursor: pointer;
+        }
+        
+        .slider-bar::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: rgb(245, 146, 53);
+            border-radius: 50%; 
+            cursor: pointer;
+        }
+    }
+
+    .box > span{
+        margin: 10%;
+        margin-right: 0%;
+        position: relative;
+        left: -10%;
+    }
+
+    .box > input{
+        width: 50%;
+        border-radius: 1em;
+        background: rgba(49, 48, 48, 0.329);
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 1%;
+        border-style: none;
+    }
+
+    .box > input:focus{
+        outline: none;
+    }
+
+    .period > input{
+        width: 20%;
+    }
+
+    .period > div{
+        display: inline-block;
+        margin-left: 5%;
+    }
+
+    .calc-button{
+        align-content: center;
+        background: rgba(14, 17, 14, 0.685);
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        span{
+            position: relative;
+            left: -5%;
+        }
+    }
+
+    .calc-button:hover{
+        background: rgb(12, 12, 12);
+    }
+
+}

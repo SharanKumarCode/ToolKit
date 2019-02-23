@@ -1,0 +1,116 @@
+.wrapper-bmi{
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+
+    .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+
+    .closeCalc{
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../calc/close.png');
+        position: absolute;
+        left:80%;
+        top:0%;
+        width: 10%;
+        height: 10%;
+        cursor: pointer;        
+    }
+
+    .closeCalc:hover{
+        background-color: grey;
+    }
+    }
+
+    .wrapper > div{
+        width: 70%;
+        height: 40%;
+        margin-left: 20%;
+
+        span{
+            display: inline-block;
+            height: 100%;
+            margin-right: 10%;
+            width: 25%;
+        }
+
+        .input{
+            width: 40%;
+            height: 100%;
+            margin-left: -10%;
+            appearance: none;
+            border-radius: 1em;
+            background: rgba(49, 48, 48, 0.329);
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 1%;
+            border-style: none;
+        }
+
+        .input:focus{
+            outline: none;
+        }
+
+        .male{
+            margin-left: -10%;
+        }
+        
+    }
+
+    .buttons{
+        float: left;
+        width: 30%;
+        height: 100%;
+        position: relative;
+        left: 0%;
+        background: grey;
+        text-align: center;
+        border-radius: 1em;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .wrapper > .bmicalcButton{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        background: rgba(14, 17, 14, 0.685);
+        color: whitesmoke;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        span{
+            position: relative;
+            top: 36%;
+            left: 5%;
+            width: 36%;
+        }
+    }
+    
+    .wrapper > .bmicalcButton:hover{
+        background: rgb(12, 12, 12);
+    }
+
+    .buttons:hover{
+        background: rgb(233, 230, 230);
+    }
+}
+
+#metric{
+    margin-right: 10%;
+}

@@ -1,0 +1,12 @@
+<div class="wrapper-suppl">
+  <div class="output">
+    <div>{{suppl.valueOutput1}}</div><br><div class="output2">{{suppl.valueOutput2}}</div> 
+  </div>
+<div *ngIf="emi.emiCalc.emi" class='canvas' style="display: block">
+    <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [options]='pieChartOptions'></canvas>
+  </div>
+</div>

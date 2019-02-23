@@ -1,0 +1,30 @@
+<div class="wrapper-emi">
+  <div (click)="onKey()" class="closeCalc"></div>
+  <div class="input-emi">
+    <div class="principal box">
+      <span class="label">Principal</span>
+      <input type="text" class="principal-input" placeholder="in Rs." [(ngModel)]="emiCalc.principal">
+    </div>
+    <div class="principal-slider sliders">
+      <input type="range" min="0" max="5000000" class="principal-slider-bar slider-bar" [(ngModel)]="emiCalc.principal">
+    </div>
+    <div class="roi box">
+        <span class="label">Rate of Interest</span>
+        <input type="text" min="0" max="20" class="roi-input" placeholder="in %" [(ngModel)]="emiCalc.roi">
+      </div>
+      <div class="roi-slider sliders">
+        <input type="range" min="0" max="20" class="roi-slider-bar slider-bar" [(ngModel)]="emiCalc.roi">
+      </div>
+      <div class="period box">
+          <span class="label">Period</span>
+          <input type="text" class="period-input" placeholder="in months" [(ngModel)]="emiCalc.period" (keyup)="period_year()">
+          <div class="years">{{periodYears}}</div>
+        </div>
+        <div class="period-slider sliders">
+          <input type="range" min="0" max="240" class="period-slider-bar slider-bar" [(ngModel)]="emiCalc.period" (change)="period_year()">
+        </div>
+    <div class="calc-button box" (click)="calcEmi()">
+      <span>Calculate EMI</span>
+    </div>
+  </div>
+</div>

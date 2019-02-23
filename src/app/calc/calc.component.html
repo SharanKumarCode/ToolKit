@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div (click)="onKey($event)" class="closeCalc"></div>
+  <div (click)="onKey($event)" class="wrapper-calc">
+    <input disabled type="text" [value]="calc.calculator.dispVal" placeholder="0" class="input-text">
+    <button class="operator-button" id="plus" value="+">+</button>
+    <button class="operator-button" id="minus" value="-">-</button>
+    <button class="operator-button" id="mul" value="*">*</button>
+    <button class="operator-button" id="div" value="/">/</button>
+    <button class="number-button" id="one" value="1">1</button>
+    <button class="number-button" id="two" value="2">2</button>
+    <button class="number-button" id="three" value="3">3</button>
+    <button class="number-button" id="four" value="4">4</button>
+    <button class="number-button" id="five" value="5">5</button>
+    <button class="number-button" id="six" value="6">6</button>
+    <button class="number-button" id="seven" value="7">7</button>
+    <button class="number-button" id="eight" value="8">8</button>
+    <button class="number-button" id="nine" value="9">9</button>
+    <button class="number-button" id="zero" value="0">0</button>
+    <button class="number-button" id="decimal" value=".">.</button>
+    <button class="operator-button" id="equal" value="=">=</button>
+    <button class="reset-button" id="reset" value="ac">AC</button>
+    <button class="clear-button" id="clear" value="clear">clear</button>
+  </div>
+</div>
